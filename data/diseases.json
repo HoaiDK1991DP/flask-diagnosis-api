@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Cúm",
+    "description": "Bệnh nhiễm virus gây sốt, ho, mệt mỏi.",
+    "symptoms": ["sốt", "ho", "mệt mỏi"]
+  },
+  {
+    "name": "Viêm dạ dày",
+    "description": "Viêm niêm mạc dạ dày gây đau bụng, buồn nôn, chán ăn.",
+    "symptoms": ["đau bụng", "buồn nôn", "mệt mỏi"]
+  }
+]
