@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from utils.scraper import scrape_diseases
 import json
 from utils.diagnosis import match_symptoms
 
@@ -37,6 +38,14 @@ def add_disease():
         "symptoms": symptoms
     }
     DISEASES.append(new_disease)
+@app.route('/scrape-diseases', methods=['GET'])
+def scrape():
+    try:
+        data = scrape_diseases()
+        return jsonify(data)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 
     # Ghi lại file
     with open('data/diseases.json', 'w', encoding='utf-8') as f:
